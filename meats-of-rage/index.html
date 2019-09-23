@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Meats of Rage</title>
+    <title>Meat Fighter</title>
     <link href="style.css" type="text/css" rel="stylesheet"/>
   </head>
   <body>
@@ -10,6 +10,10 @@
     <div class="main-container">
 
       <div class="screen">
+
+        <div id="main-screen" class="sub-screen main-screen">
+          <canvas id="canvas"></canvas>
+        </div>
 
         <div id="char-select-screen" class="sub-screen char-select-screen">
           <h1>Choose Your Rogue</h1>
@@ -30,20 +34,34 @@
               <img class="char-image" src="../images/floyd.png"/>
               <div class="char-name">Floyd</div>
             </div>
+            <div class="char-box">
+              <img class="char-image" src="../images/guy.png"/>
+              <div class="char-name">Fieri</div>
+            </div>
+            <div class="char-box">
+              <img class="char-image" src="../images/anthony.png"/>
+              <div class="char-name">Thompson</div>
+            </div>
           </div>
-          <h2 id="meat-your-fate-button">Meat Your Fate</h2>
 
+          <h2 id="meat-your-fate-button">Meat Your Fate</h2>
+          <h4 id="character-summary"></h4>
         </div>
+
+
 
         <div id="preload-screen" class="sub-screen preload-screen">
-          <h1>Meats of Rage</h1>
+          <h1>Meat Fighter</h1>
           <h4 id="loading-progress-text">Loading</h4>
         </div>
+
+
 
       </div>
 
     </div>
 
+    <script src="game.js"></script>
     <script src="main.js"></script>
   </body>
 </html>
