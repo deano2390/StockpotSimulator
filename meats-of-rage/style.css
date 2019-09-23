@@ -1,0 +1,141 @@
+
+
+
+@font-face {
+    font-family: 'mortal_kombat_1regular';
+    src: url('mk1-webfont.woff2') format('woff2'),
+         url('mk1-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body, html, .main-container {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  font-family: "mortal_kombat_1regular";
+}
+
+div {
+  display: flex;
+  box-sizing: border-box;
+  /* align-self: flex-start; */
+}
+
+.main-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: black;
+}
+
+.sub-screen {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+/* ============================================ */
+
+.screen {
+  height: 56.25vw;
+  width: 100vw;
+  background: white;
+  position: relative;
+}
+
+@media screen and (min-aspect-ratio : 16/9) {
+  .screen {
+    height: 100vh;
+    width: 177.778vh;
+  }
+}
+
+
+.preload-screen {
+  background: black;
+  justify-content: center;
+  align-items: center;
+  color: red;
+  flex-direction: column;
+  transition: 1s;
+}
+
+.preload-screen > h1 {
+  font-size: 10vmax;
+}
+
+.preload-screen > h4 {
+  font-size: 3vmax;
+  margin: 0;
+  padding: 0;
+}
+
+
+.char-select-screen {
+  justify-content: center;
+  align-items: center;
+  transition: 0.25s;
+  background-position: center;
+  background-size: cover;
+  background-color: black;
+  flex-direction: column;
+}
+.char-select-screen > h1
+{
+    color: white;
+}
+
+.char-select-screen > h2
+{
+    color: white;
+    font-size: 4vmax;
+    visibility: hidden;
+    cursor: pointer;
+    background: black;
+    padding: 2vmax;
+    border-radius: 0.5vmax;
+    transition: 1s;
+    transform: scale(0);
+}
+
+.char-select-screen > h2:hover
+{
+  color: red;
+}
+
+.char-select-box {
+  transition: 1s;
+  opacity: 0;
+  transform: scale(0);
+}
+
+.char-box {
+  /* background: red; */
+  border: 3px inset grey;
+  background-image: url("../images/beef.jpg");
+  background-size: cover;
+  color: white;
+  flex-direction: column;
+  align-items: center;
+  padding: 1vmin;
+  margin: 1vmin;
+  transform: scale(0.8);
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+
+.char-image {
+  width: 20vmin;
+  height: 20vmin;
+}
+
+.char-name {
+  padding: 1vmin;
+  font-size: 3vmin;
+}
